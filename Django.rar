@@ -1,0 +1,38 @@
+USO DE DJANGO PARTE 1
+Crear un directorio para el proyecto (en este ejemplo se llama): mkdir neuron
+Entrar al directorio: cd neuron
+Crear un entorno virtual en el directorio (en este ejemplo se llama dev_env): python3 -m venv dev_env
+Iniciar el entorno virtual: source dev_env/bin/activate
+Se sabe que está en el entorno virtual porque al comienzo de la línea de comandos debe aparecer "(dev_env)"
+Instalar Django en el entorno virtual: pip install django
+Crear un proyecto de Django (en este caso se llamara neuron_eeg): django-admin startproject neuron_egg .
+Hace el primer llamado a la construcción del modelo de datos: python manage.py migrate
+
+Instalar git: sudo apt-get install git
+Inicializar el git: init git
+Configurar datos de git, primero usuario: git config --global user.name pepito 
+Configurar datos de git, luego correo: git config --global user.mail pepito@mail.com
+Crear archivo de .gitignore: gedit .gitignore
+
+Copiar este texto dentro del archivo:
+*.pyc
+*~
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
+
+Guardar el archivo, y cerrar la ventana, esto le retornara a la consola para seguir trabajando
+Revisar que Git este funcionando bien: git status
+
+Deben crear una cuenta en github, y crear un repositorio para el proyecto del curso. 
+Luego de crearlo, deben sacar la dirección .git de clonación del repositorio. Ejemplo: https://github.com/Eddycas/Emotiv_Django.git
+
+Ahora, se va a enlazar el git de la máquina con el del repositorio: git remote add origin https://github.com/Eddycas/Emotiv_Django.git
+Luego se hace el primer llamado al repositorio: git pull
+
+Ahora, se realiza el primer commit para probar la conexión y los permisos.
+Primero, agregar todos los cambios realizados (hasta ahora nada): git add --all
+Luego, realizar el mensaje que indica la actualización de archivos: git commit -m "El mensaje descriptivo de la actualización"
+Finalmente, subir la actualización al repositorio: git push
